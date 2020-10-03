@@ -7,8 +7,9 @@ import java.awt.*;
 
 public class Draw extends JLabel {
 
+	Image head;
     Point p;
-
+   
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D) g;
@@ -26,7 +27,10 @@ public class Draw extends JLabel {
         }
 
         //Draw Snake Head
-        g.setColor(new Color(0,153,0));
+        ImageIcon icon_head = new ImageIcon("head.png");
+        head = icon_head.getImage();
+        g.drawImage(head, Snake.head.getX(), Snake.head.getY(), labelFor);
+//        g.setColor(new Color(0,153,0));
         p = Snake.ptc(Snake.head.getX(),Snake.head.getY());
         g.fillRect(p.x,p.y,32,32);
 

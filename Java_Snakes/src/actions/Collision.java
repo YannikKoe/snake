@@ -1,6 +1,7 @@
 package actions;
 
 import game.Snake;
+import clocks.GameClock;
 
 public class Collision {
 

@@ -12,7 +12,7 @@ public class Gui {
     public static int xoff = 130, yoff = 20;
 
     public void create(){
-        jf = new JFrame("Snake");
+        jf = new JFrame("Snake by Yannik, Jacob and Stephan");
         jf.setSize(width,height);
         jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         jf.setLocationRelativeTo(null);

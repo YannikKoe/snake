@@ -1,15 +1,16 @@
 package clocks;
 
 import actions.Collision;
+
 import game.Snake;
 
 public class GameClock extends Thread{
     public static boolean running = true;
-    
-    public int sleepTime = 500;
+    public static int sleepTime = 200;
 
     public void run(){
-        while(running){
+    	   while(running){
+       
             try {
                 sleep(sleepTime);
                 Snake.move();
@@ -17,18 +18,21 @@ public class GameClock extends Thread{
                 Collision.collidePickUp();
                 if(Collision.collideSelf()){
                     Snake.tails.clear();
+                    Snake.head.setX(7);
+                    Snake.head.setY(7);
                     Snake.score = 0;
+                    running = false;
                 }
                 if(Collision.collideWall()){
                     Snake.tails.clear();
                     Snake.head.setX(7);
                     Snake.head.setY(7);
                     Snake.score = 0;
+                    running = false;
                 }
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
     }
-
 }
