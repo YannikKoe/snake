@@ -1,35 +1,29 @@
 package p_main;
 
-import java.awt.*;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
-
-import javax.swing.*;
+import javax.swing.JPanel;
 
 /**
- * Diese Klasse dient zur Erzeugung des Spielfeldes
+ * This class builds the play board.
  * 
+<<<<<<< HEAD
  * @author Yannik K�sling
+=======
+ * @author Yannik Koesling, Stephan Schellenberg, Jacob Waniekle
+>>>>>>> refs/heads/master
  * @version 1.0
  */
-public class C_Board extends JFrame implements ItemListener {
+public class C_Board {
 	
 	/**
-	 * Deklaration und Initialisierung der Variablen und Konstanten
+	 * Declaration and initialization of the objects
 	 */
-	private final int k_height = 700;
-	private final int k_width  = 850;
+	JPanel o_boardPanel = new JPanel();
 	
 	/**
-	 * Deklaration und Initialisierung der Objekte
-	 */
-	JCheckBox o_cb_sound = new JCheckBox("Sound on");
-	JPanel o_panel = new JPanel();
-	
-	/**
-	 * Konstruktor
+	 * Constructor
 	 */
 	public C_Board() {
+<<<<<<< HEAD
 		m_buildBoard();
 	}
 	
@@ -44,14 +38,13 @@ public class C_Board extends JFrame implements ItemListener {
 		setVisible(true);
 		setDefaultCloseOperation(EXIT_ON_CLOSE); 		//Beendet Applikation sobald auf 'x'-Knopf gedrückt wird
 		setResizable(true);   							// Damit Fenster vergroessert/verkleinert werden kann
+=======
+>>>>>>> refs/heads/master
 		
-		m_setControls();
 		
-		add(o_panel);
-		o_panel.setBackground(Color.black);  			
-		o_panel.updateUI();
 		
 	}
+<<<<<<< HEAD
 	
 	/**
 	 * Fügt die Bedienelemente hinzu
@@ -76,12 +69,6 @@ public class C_Board extends JFrame implements ItemListener {
 		
 	}
 	
+=======
+>>>>>>> refs/heads/master
 }
-
-
-
-
-
-
-
-
